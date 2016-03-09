@@ -1,4 +1,5 @@
 require 'minitest/autorun'
+require_relative 'test_helper'
 require_relative '../lib/converter.rb'
 
 class ConverterTest < Minitest::Test
@@ -32,6 +33,23 @@ class ConverterTest < Minitest::Test
 
   def test_converted_contents_properly_formats_from_markdown_to_html
   assert_equal "<p><strong>I am <em>so</strong></em> glad this is almost over.</p>", @converter.converted_contents
+  end
+
+  def test_unordered_lists_insert_unordered_list_tags_before_and_after_list
+    helper = TestHelper.new
+    assert_equal helper.list_html, @converter.unordered_lists(helper.list.split("\n"))
+  end
+
+  def test_unordered_lists_changes_list_items_from_markdown_markers_to_html_tags
+  skip
+  end
+
+  def test_ordered_lists_insert_unordered_list_tags_before_and_after_list
+  skip
+  end
+
+  def test_ordered_lists_changes_list_items_from_numbers_to_ordered_list_tags
+  skip
   end
 
 end
