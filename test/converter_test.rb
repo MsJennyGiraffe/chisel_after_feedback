@@ -35,17 +35,19 @@ class ConverterTest < Minitest::Test
   assert_equal "<p><strong>I am <em>so</strong></em> glad this is almost over.</p>", @converter.converted_contents
   end
 
+#hardcode branches to test
+
   def test_unordered_lists_insert_unordered_list_tags_before_and_after_list
     helper = TestHelper.new
-    assert_equal helper.list_html, @converter.unordered_lists(helper.list.split("\n"))
+    assert_equal helper.list_html, @converter.unordered_lists(helper.list_html, 0, 4)
   end
 
-  def test_unordered_lists_changes_list_items_from_markdown_markers_to_html_tags
-  skip
+  def test_unordered_lists_inserts_list_tags_in_place_of_asterics_and_closes_if_it_is_last_or_only_item
+    assert_equal "<li>list</li></ul>", @converter.unordered_lists("* list", 2, 2)
   end
 
   def test_ordered_lists_insert_unordered_list_tags_before_and_after_list
-  skip
+    assert_equal "<ul><li>list</li></ul>", @converter.unordered_lists("* list", 0, 0)
   end
 
   def test_ordered_lists_changes_list_items_from_numbers_to_ordered_list_tags
