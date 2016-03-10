@@ -34,4 +34,10 @@ class TestHelper
     "This is a list:<ul>      <li>this is a thing</li>      <li>this is an even longer thing</li>      <li>look how long this thing is...</li></ul>"
   end
 
+  def ordered_lists_markdown
+    "This is an ordered list:
+     1. This is item one
+     2. This is item two"
+  end
+
 end

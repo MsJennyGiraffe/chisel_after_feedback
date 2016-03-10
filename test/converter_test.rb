@@ -40,6 +40,7 @@ class ConverterTest < Minitest::Test
   end
 
   def test_unordered_list_tags_replace_asterics
+    skip
     assert_equal "<li> list </li>", @converter.unordered_list_tags_list("* list")
   end
 
@@ -50,9 +51,17 @@ class ConverterTest < Minitest::Test
   end
 
   def test_integration_test_with_test_helper
+    skip
     test_helper = TestHelper.new
     converter = Converter.new(test_helper.list)
     assert_equal test_helper.list_html, converter.converted_contents
+  end
+
+  def test_ordered_lists_replaces_numbers_with_html_tags
+    test_helper = TestHelper.new
+    ordered_list = test_helper.ordered_lists_markdown
+    
+    assert_equal 0, @converter.ordered_list_tags_list(ordered_list.split)
   end
 
 end
