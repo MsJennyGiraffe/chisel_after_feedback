@@ -11,7 +11,6 @@ You can find the project spec [here](https://github.com/turingschool/curriculum/
 * cd into the file directory within the project directory
 
     git clone git@github.com:MsJennyGiraffe/chisel_after_feedback.git
-s
     cd ~/chisel_after_feedback/files
 
 Run the program from the files folder by running the main chisel file in the lib folder with the input file as the first command line argument, and the output file as the second command line argument.
