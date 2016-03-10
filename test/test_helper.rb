@@ -11,7 +11,22 @@ class TestHelper
   end
 
   def list_html
-    "My favorite cuisines are:<ul>    <li>Sushi</li>    <li>Barbeque</li>    <li>Mexican</li></ul>    I also like other food"
+"<p>My favorite cuisines are:</p>
+<p></p>
+    <ul>
+<li> Sushi </li>
+    <li> Barbeque </li>
+    <li> Mexican </li>
+</ul>
+<p></p>
+<p>    I also like other food</p>"
+
+  end
+
+  def one_word_list_test
+    "<ul>
+<li> list </li>
+</ul>"
   end
 
   def different_list
@@ -23,6 +38,11 @@ class TestHelper
 
   def different_list_html
     "This is a list:<ul>      <li>this is a thing</li>      <li>this is an even longer thing</li>      <li>look how long this thing is...</li></ul>"
+  end
+
+  def ordered_lists_markdown
+    "This is an ordered list:
+     1. This is item one"
   end
 
 end
