@@ -44,8 +44,15 @@ class ConverterTest < Minitest::Test
   end
 
   def test_unordered_list_tags_creates_unordered_list_opening_and_closing_notation
+    skip
     html = @converter.unordered_list_tags_list("* list")
-    assert_equal 0, unordered_list_tags(html)
+    assert_equal 0, @converter.unordered_list_tags(html)
+  end
+
+  def test_integration_test_with_test_helper
+    test_helper = TestHelper.new
+    converter = Converter.new(test_helper.list)
+    assert_equal test_helper.list_html, converter.converted_contents
   end
 
 end

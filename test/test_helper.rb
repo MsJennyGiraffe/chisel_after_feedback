@@ -11,7 +11,16 @@ class TestHelper
   end
 
   def list_html
-    "My favorite cuisines are:<ul>    <li>Sushi</li>    <li>Barbeque</li>    <li>Mexican</li></ul>    I also like other food"
+    "<p>My favorite cuisines are:</p>
+    <p></p>
+        <ul>
+    <li> Sushi </li>
+        <li> Barbeque </li>
+        <li> Mexican </li>
+    </ul>
+    <p></p>
+    <p>    I also like other food</p>"
+
   end
 
   def different_list
