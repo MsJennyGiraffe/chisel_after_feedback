@@ -6,12 +6,11 @@ You can find the project spec [here](https://github.com/turingschool/curriculum/
 
 ### Running the program
 
-* git clone the project into a directory
-
-* cd into the file directory within the project directory
-
+clone the project into a directory
 
     git clone git@github.com:MsJennyGiraffe/chisel_after_feedback.git
+
+cd into the files folder in the project directory
 
     cd ~/chisel_after_feedback/files
 
